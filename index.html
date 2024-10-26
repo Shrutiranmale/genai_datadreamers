@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Restoring AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Restoring AI</h1>
+        
+        <div class="buttons">
+            <input type="file" id="upload" style="display: none;" onchange="handleFileUpload(event)">
+            <button onclick="document.getElementById('upload').click()">Upload Image</button>
+            <button onclick="startCamera()">Capture Image</button>
+        </div>
+
+        <button class="generate-btn" onclick="generateImage()">Generate Image</button>
+        
+        <video id="camera" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="capturedImage" style="display: none; margin-top: 20px;" alt="Captured Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
